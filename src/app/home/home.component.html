@@ -1,0 +1,47 @@
+<p>Home component</p>
+<!-- <input type="text" value="{{ name }}" />
+<br />
+<input type="text" [value]="name" title="Đây là {{ name }}" />
+<br />
+<input type="text" [value]="name" [title]="'Đây là ' + name" /> -->
+
+<!-- <h3 *ngIf="age > 20">Bạn già quá rồi !</h3>
+<h3 *ngIf="age <= 20">Bạn còn trẻ lắm !</h3>
+ -->
+
+<!-- <div *ngIf="age <= 18; then tre; else gia"></div>
+<ng-template #gia><h2>Bạn già quá rồi !</h2></ng-template>
+<ng-template #tre><h2>Bạn còn trẻ quá !</h2></ng-template>
+
+<input type="text" [(ngModel)]="name" />
+<input type="text" [(ngModel)]="age" />
+<h2>Hello {{ name }}</h2>
+<button (click)="handleResetName()">Reset name</button> -->
+
+<div>
+  <h3>List fruits</h3>
+  <ul *ngFor="let fruit of fruits; let i = index">
+    <li>{{ fruit.id }}. {{ fruit.name }}</li>
+  </ul>
+
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Sale</th>
+    </tr>
+    <tr *ngFor="let fruit of fruits; let i = index">
+      <td>{{ fruit.id }}</td>
+      <td>{{ fruit.name | uppercase }}</td>
+      <td>
+        <span [ngClass]="{ negative: fruit.price < 0 }">{{
+          fruit.price | currency: "USD":"symbol":"1.0"
+        }}</span>
+      </td>
+      <td>
+        <span>{{ fruit.sale | onSale }}</span>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+table {
+  border: 1px solid;
+  border-collapse: collapse;
+  th,
+  td {
+    min-width: 150px;
+  }
+  th {
+    border: 1px solid;
+  }
+  td {
+    border: 1px solid;
+  }
+}
+
+.negative {
+  color: red;
+}
